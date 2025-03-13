@@ -30,3 +30,5 @@ func LoadConfig() *Config {
 		GatewayURL:    os.Getenv("GATEWAY_URL"),
 	}
 }
+
+// Armazenas as conf do bot (urls e token)

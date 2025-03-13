@@ -11,7 +11,7 @@ import (
 func main() {
 	configInstance := config.LoadConfig()
 
-	// ✅ Criação do mapa compartilhado de localidades
+	// Criação do mapa compartilhado de localidades
 	localidades := make(map[string]string)
 
 	// Registra o comando /addlocal
@@ -23,7 +23,7 @@ func main() {
 	localCmd := cmd.NewLocalCommand(configInstance, &http.Client{}, localidades)
 	registry.RegistryCommand(localCmd)
 
-	// 🔍 Verificar se ambos os comandos estão usando o mesmo mapa
+	// Verificar se ambos os comandos estão usando o mesmo mapa
 	fmt.Println("Mapa de localidades antes do bot iniciar:", localidades)
 
 	// Inicializa o cliente do Discord
